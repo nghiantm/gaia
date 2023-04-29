@@ -8,14 +8,11 @@
     <title>Price Board</title>   
     
     <style>
-        h1 {
+        .montserrat-font {
             font-family: 'Montserrat', sans-serif;
         }
         label, a {
             font-family: 'Montserrat', sans-serif;
-        }
-        .helvetica-div {
-            font-family: Helvetica, Arial, sans-serif;
         }
     </style>
 
@@ -26,6 +23,47 @@
 </head>
 
 <body>
-    <center>Meet<br><p style="font-size: 100px">Gaia</p></center>
+    <div class="grid grid-rows-5 h-screen w-screen">
+        <!-- First row, name -->
+        <div class="grid grid-rows-3 text-center">
+            <div class="row-span-1">
+                <div class="flex justify-center items-end h-full text-4xl montserrat-font">
+                    Welcome To
+                </div>
+            </div>
+            <div class="row-span-2">
+                <div class="flex justify-center items-center h-full text-9xl montserrat-font font-bold	">
+                    GAIA
+                </div>
+            </div>
+        </div>
+        <!-- First row end -->
+        <!-- Second row start -->
+        <div class="row-span-1">
+            <div>
+                1
+            </div>
+        </div>
+        <!-- Second row end -->
+        <!-- Thrid row start -->
+        <div class="row-span-1 bg-red-100">
+            <div class="grid grid-rows-3 h-full">
+                <div class="flex row-span-1 justify-center items-center montserrat-font text-xl">
+                    Bla Bla
+                </div>
+                <div class="row-span-1 flex justify-center">
+                    <div class="inline-flex justify-center items-center">
+                        <button type ="submit" name="start" value="clicked" class="inline-flex justify-center bg-blue-500 hover:bg-blue-700 text-white font-bold px-10 py-4 rounded">
+                            Start Making Green Habit
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            4
+        </div>
+    </div>
+
 
 </body>
