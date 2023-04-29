@@ -8,14 +8,8 @@
     <title>Price Board</title>   
     
     <style>
-        h1 {
+        .montserratFont {
             font-family: 'Montserrat', sans-serif;
-        }
-        label, a {
-            font-family: 'Montserrat', sans-serif;
-        }
-        .helvetica-div {
-            font-family: Helvetica, Arial, sans-serif;
         }
     </style>
 
@@ -26,16 +20,43 @@
 </head>
 
 <body>
-    Test
     <div class="grid grid-cols-3">
-        <div>
-            1
-        </div>
-        <div class="grid gird-rows-7 h-screen">
-            <div class="bg-red-100 row-span-1">
-                1
+            <div class="grid grid-rows-6">
+                <div class="row-span-1 bg-blue-100">
+                    <div class="grid grid-rows-2 h-full">
+                        <div class="inline-flex justify-center items-center montserratFont text-4xl font-bold">
+                            Your Challenges
+                        </div>
+                        <div class="inline-flex justify-center items-center montserratFont">
+                            Description
+                        </div>
+                    </div>
+                </div>
+                <div class="row-span-5">
+                    <div class="grid grid-rows-2 h-full">
+                        <div class="bg-blue-500">
+                            <div class="grid grid-rows-6 h-full">
+                                <div class="row-span-1 inline-flex justify-center items-center montserratFont text-2xl">
+                                    Daily Challenges
+                                </div>
+                                <div class="row-span-5">
+                                    2
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            2
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="bg-blue-100 row-span-4">
+
+
+        <div class="grid gird-rows-9 h-screen">
+            <div class="bg-red-100 row-span-1 flex justify-center items-center text-4xl">
+                Grow Your Tree
+            </div>
+            <div class="bg-blue-100 row-span-6">
                 2
             </div>
             <div class="bg-red-100 row-span-2">
