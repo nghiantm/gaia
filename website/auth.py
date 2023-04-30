@@ -1,14 +1,24 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request, redirect, url_for
+import requests
+import csv
 
 auth = Blueprint('auth', __name__)
 
-@auth.route('/main')
+@auth.route('/main', methods=['GET', 'POST'])
 def main():
-    return render_template('main.html', bool=True)
+    dailyDict = {}
+    with open('website/static/dailyChallenge.csv') as daily:
+        dailyReader = csv.reader(daily, delimiter=',')
 
-@auth.route('/logout')
-def logout():
-    return "<p>Logout<p>"
+        #skip header row
+        next(dailyReader)
+    
+        for row in dailyReader:
+            key = row[0]
+            value = bool(row[1])
+            dailyDict[key] = value
+
+    return render_template('main.html', dailyDict=dailyDict)
 
 @auth.route('/sign-up')
 def sign_up():
