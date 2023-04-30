@@ -30,7 +30,7 @@ def initDict():
         'Use kitchen waste as compost': False
     }
     dailyDict = {}
-    keys = random.sample(totalDict.keys(), 10)
+    keys = random.sample(sorted(totalDict.keys()), 10)
     for key in keys:
         dailyDict[key] = totalDict[key]
 

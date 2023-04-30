@@ -1,47 +1,47 @@
 const question = [
     {
-        question: "<span style='color: rgb(235 235 237);'>Trees may help reduce the effects of global warming by which of these?",
+        question: "<span style='color: rgb(235 235 237);'>Which country has the highest carbon footprint per capita?",
         answers: [
-            { text: "reducing carbon dioxide concentrations in the atmosphere", correct: true},
-            { text: "losing their leaves in winter", correct: false},
-            { text: "increasing oxygen concentration in the atmosphere", correct: false},
-            { text: "providing shade from UV rays", correct: false},
+            { text: "United States", correct: false},
+            { text: "China", correct: false},
+            { text: "India", correct: false},
+            { text: "Saudi Arabia", correct: true},
         ]
     },
     {
-        question: "<span style='color: rgb(235 235 237);'>What two main substances do trees absorb from the atmosphere?",
+        question: "<span style='color: rgb(235 235 237);'>What is the main driver of melting Arctic sea ice?",
         answers: [
-            { text: "trees absorb carbon dioxide and water", correct: true},
-            { text: "trees only need sunlight", correct: false},
-            { text: "trees absorb oxygen and water", correct: false},
-            { text: "trees absorb nutrients and water from the soil", correct: false},
+            { text: "Natural cycles", correct: false},
+            { text: "Greenhouse gas emissions", correct: true},
+            { text: "Deforestation", correct: false},
+            { text: "Industrial pollution", correct: false},
         ]
     },
     {
-        question: "<span style='color: rgb(235 235 237);'>What two main substances do trees absorb from the atmosphere?",
+        question: "<span style='color: rgb(235 235 237);'>What is the name of the process by which carbon is removed from the atmosphere and stored in the ground?",
         answers: [
-            { text: "trees absorb carbon dioxide and water", correct: true},
-            { text: "trees only need sunlight", correct: false},
-            { text: "trees absorb oxygen and water", correct: false},
-            { text: "trees absorb nutrients and water from the soil", correct: false},
+            { text: "Carbon sequestration", correct: true},
+            { text: "Carbon capture", correct: false},
+            { text: "Carbon reduction", correct: false},
+            { text: "Carbon offsetting", correct: false},
         ]
     },
     {
-        question: "<span style='color: rgb(235 235 237);'>What two main substances do trees absorb from the atmosphere?",
+        question: "<span style='color: rgb(235 235 237);'>What is the name of the phenomenon by which the warming of the Arctic causes changes in the jet stream that can lead to extreme weather events?",
         answers: [
-            { text: "trees absorb carbon dioxide and water", correct: true},
-            { text: "trees only need sunlight", correct: false},
-            { text: "trees absorb oxygen and water", correct: false},
-            { text: "trees absorb nutrients and water from the soil", correct: false},
+            { text: "Polar vortex disruption", correct: false},
+            { text: "Jet stream oscillation", correct: false},
+            { text: "Arctic amplification", correct: true},
+            { text: "Troposphere destabilization", correct: false},
         ]
     },
     {
-        question: "<span style='color: rgb(235 235 237);'>What two main substances do trees absorb from the atmosphere?",
+        question: "<span style='color: rgb(235 235 237);'>How many times can we recycle a cardboard box?",
         answers: [
-            { text: "trees absorb carbon dioxide and water", correct: true},
-            { text: "trees only need sunlight", correct: false},
-            { text: "trees absorb oxygen and water", correct: false},
-            { text: "trees absorb nutrients and water from the soil", correct: false},
+            { text: "7 times", correct: true},
+            { text: "2 times", correct: false},
+            { text: "10 times", correct: false},
+            { text: "5 times", correct: false},
         ]
     },
 ];
