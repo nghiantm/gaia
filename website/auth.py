@@ -20,6 +20,6 @@ def main():
 
     return render_template('main.html', dailyDict=dailyDict)
 
-@auth.route('/sign-up')
-def sign_up():
-    return "<p>Sign up<p>"
+@auth.route('/waste')
+def waste():
+    return render_template('waste.html', Boolean=True)
