@@ -36,11 +36,12 @@ def initDict():
 
 initDict()
 
-counter = 1
+counter = 0
+treeviaBool = True
 
 @auth.route('/main', methods=['GET', 'POST'])
 def main():
-    global counter  
+    global counter, treeviaBool
 
     #running score for tree development
     treeScore = 0
@@ -69,6 +70,14 @@ def main():
             initDict()
             counter = 1
             return redirect('#')
+
+        if request.form.get('treevia') == 'clicked':
+            treeviaBool = True
+            return redirect('#')
+        
+        if request.form.get('minigame') == 'clicked':
+            treeviaBool = False
+            return redirect('#')
     
         newKey = request.form.get('doneness')
         #reverse boolean value when clicked
@@ -76,4 +85,5 @@ def main():
         #redirect to avoid duplicate POST request
         return redirect('#')
 
-    return render_template('main.html', dailyDict=dailyDict, treeScore=treeScore, level=level, counter=counter)
+    return render_template('main.html', dailyDict=dailyDict, treeScore=treeScore, level=level, counter=counter, treeviaBool=treeviaBool)
+

@@ -19,6 +19,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- CSS styling for quizzes -->
     <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/style1.css">
+    <script src="{{ url_for('static', filename='main1.js') }}" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
@@ -64,10 +67,17 @@
                                         </form>
                                         {% endfor %}
                                     </ul>
-                                    <div class="flex justify-center items-center montserratFont italic text-sm pt-5 text-blue-500">
+                                    <div class="flex justify-center items-center montserratFont text-sm pt-2 text-blue-500">
+                                        {% if treeScore >= 9 %}
+                                        Congratulations! You can plant your next tree now
+                                        {% else %}
+                                        {{treeScore}} down, {{9-treeScore}} more to go
+                                        {% endif %}
+                                    </div>
+                                    <div class="flex justify-center items-center montserratFont italic text-sm pt-5 text-gray-400">
                                         *Get 9 our of 10 challenges done for completion
                                     </div>
-                                    <form method="POST" class="flex justify-center items-center mt-6">
+                                    <form method="POST" class="flex justify-center items-center mt-4">
                                         <button type="submit" name="reset" value="clicked" class="bg-red-500 hover:bg-red-700 text-white font-bold px-4 py-2 rounded">
                                             Reset challenges interval
                                         </button>
@@ -79,8 +89,21 @@
                             <div class="flex justify-center items-center row-span-1 montserratFont text-2xl">
                                 Your Statistics
                             </div>
-                            <div class="row-span-3">
-                                1
+                            <div class="inline-flex row-span-3 justify-center items-start">
+                                <ul class="list-disc">
+                                    <li>
+                                        You have grew {{ counter }} tree(s)
+                                    </li>
+                                    <li>
+                                        Which is a year's supply of oxygen for {{2*counter}} people
+                                    </li>
+                                    <li>
+                                        Which absorb {{ 48*counter }} lbs of CO2 annually
+                                    </li>
+                                    <li>
+                                        {{240 - counter}} trees away from offsetting the<br>annual carbon emission of 1 car
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -164,7 +187,7 @@
             <div class="row-span-1">
                 <div class="grid grid-rows-2 h-full">
                     <div class="inline-flex justify-center items-end montserratFont text-4xl font-bold text-[#f5f5f7]">
-                        "Tree"via
+                        "Tree"via & Minigame
                     </div>
                     <div class="inline-flex justify-center items-center montserratFont text-[#f5f5f7] text-lg">
                         Expand your knowledge with fun facts
@@ -173,9 +196,15 @@
             </div>
 
             <div class="app row-span-5">
-                <h1>Questions</h1>
+                {% if treeviaBool == True %}
+                <form method="POST">
+                    <div class="w-full flex justify-between">
+                        <button type="submit" name="treevia" value="clicked" class="text-left text-3xl text-blue-500">Treevia</button>
+                        <button type="submit" name="minigame" value="clicked" class="text-right text-[#f5f5f7] text-3xl">Minigame</button>
+                    </div>
+                </form>
                 <div class="qui">
-                    <h2 id="question">Question goes here</h2>
+                    <h2 id="question" class="pt-6">Question goes here</h2>
                     <div id="answer-buttons">
                         <button class="btn">Answer A</A></button>
                         <button class="btn">Answer B</A></button>
@@ -184,8 +213,37 @@
                     </div>
                     <button id="next-btn">next</button>
                 </div>
+                <script src="{{ url_for('static', filename='script.js') }}"></script>
+                {% else %}
+                <form method="POST">
+                    <div class="w-full flex justify-between">
+                        <button type="submit" name="treevia" value="clicked" class="text-left text-[#f5f5f7] text-3xl">Treevia</button>
+                        <button type="submit" name="minigame" value="clicked" class="text-right text-3xl text-blue-500">Minigame</button>
+                    </div>
+                </form>
+                <div class="flex justify-center w-full text-lg text-green-500 pt-8">
+                    Match the item to the correct bin
+                </div>
+                    <section class="draggable-elements">
+                
+                        <i class="fas fa-apple-whole draggable" draggable="true" style="color: brown;" id = "organic"></i>
+                        <i class="fa-regular fa-newspaper draggable" draggable="true" style="color: darkgray;" id = "paper" ></i>
+                        <i class="fa-solid fa-bottle-water draggable" draggable="true" style="color: rgb(219, 219, 29);" id = "plastic"></i>
+                        <i class="fa-solid fa-wine-glass-empty draggable" draggable="true" style="color: lightblue;" id = "glass"></i>
+                        <i class="fa-solid fa-plug draggable" draggable="true" style="color: orangered;" id = "metal">></i>
+                
+                    </section>
+                    <section class="droppable-elements">
+                        <div class="droppable" data-draggable-id="organic"><span>Organic</span></div>
+                        <div class="droppable" data-draggable-id="plastic"><span>Plastic</span></div>
+                        <div class="droppable" data-draggable-id="glass"><span>Glass</span></div>
+                        <div class="droppable" data-draggable-id="metal"><span>Metal</span></div>
+                        <div class="droppable" data-draggable-id="paper"><span>Paper</span></div>
+                
+                
+                    </section>
+                {% endif %}
             </div>
-            <script src="{{ url_for('static', filename='script.js') }}"></script>
         </div>
     </div>
 </body>
