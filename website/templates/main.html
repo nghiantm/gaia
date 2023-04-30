@@ -34,24 +34,24 @@
                     </div>
                 </div>
                 <div class="row-span-5">
-                    <div class="grid grid-rows-2 h-full">
-                        <div class="bg-blue-500">
-                            <div class="grid grid-rows-6 h-full border-2 border-black rounded-lg p-4">
+                    <div class="grid grid-rows-3 h-full">
+                        <div class="row-span-2">
+                            <div class="grid grid-rows-6 h-full border-2 border-black rounded-lg p-1 m-1">
                                 <div class="row-span-1 inline-flex justify-center items-center montserratFont text-2xl">
-                                    Daily Challenges
+                                    Challenges {{counter}}
                                 </div>
                                 <div class="row-span-5">
                                     <ul class="">
                                         {% for key, value in dailyDict.items() %}
                                         <form method="POST">
                                             {% if value == True %}
-                                                <li class="flex justify-start ml-10 line-through text-slate-600">
+                                                <li class="flex justify-start ml-10 line-through text-slate-400 montserratFont">
                                                     <button type="submit" name="doneness" value="{{ key }}">
                                                         {{key}}
                                                     </button>
                                                 </li>
                                             {% else %}
-                                                <li class="flex justify-start ml-10">
+                                                <li class="flex justify-start ml-10 montserratFont">
                                                     <button type="submit" name="doneness" value="{{ key }}">
                                                         {{key}}
                                                     </button>
@@ -60,11 +60,24 @@
                                         </form>
                                         {% endfor %}
                                     </ul>
+                                    <div class="flex justify-center items-center montserratFont italic text-sm pt-5 text-blue-500">
+                                        *Get 9 our of 10 challenges done for completion
+                                    </div>
+                                    <form method="POST" class="flex justify-center items-center mt-6">
+                                        <button type="submit" name="reset" value="clicked" class="bg-red-500 hover:bg-red-700 text-white font-bold px-4 py-2 rounded">
+                                            Reset challenges interval
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
-                        <div>
-                            2
+                        <div class="grid grid-rows-4 row-span-1 border-2 border-black rounded-lg p-1 mb-1 ml-1 mt-2 mr-1">
+                            <div class="flex justify-center items-center row-span-1 montserratFont text-2xl">
+                                Your Statistics
+                            </div>
+                            <div class="row-span-3">
+                                1
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -86,34 +99,55 @@
             <div class="row-span-5">
                 <div class="grid grid-rows-6 h-full">
                     <div class="row-span-5">
-                        <div class="grid grid-rows-6 h-full border-2 border-black rounded-lg p-4">
-                            <div class="row-span-5 inline-flex justify-center items-center montserratFont text-2xl">
+                        <div class="h-full border-2 border-black rounded-lg p-4 m-1 bg-no-repeat bg-bottom bg-cover" style="background-image: url(static/bg-forest.jpg);">
+                            <div class="flex pl-4 pt-7 text-base montserratFont">
+                                Tree Evolution Level: {{level}}/5
+                            </div>
                                 {% if treeScore <= 2 %}
-                                <div>
-                                    1st
+                                <div class="montserratFont text-2xl">
+                                    <div class="flex justify-center pt-60">
+                                        <img class="w-24" src="static/phrase1.png">
+                                    </div>
                                 </div>
                                 {% elif 2 < treeScore <= 4 %}
-                                <div>
-                                    2
+                                <div class="montserratFont text-2xl">
+                                    <div class="flex justify-center pt-60">
+                                        <img class="w-24 pb-10" src="static/phrase2.png">
+                                    </div>
                                 </div>
                                 {% elif 4 < treeScore <= 6 %}
                                 <div>
-                                    3
+                                    <div class="flex items-center justify-center pt-60">
+                                        <img class="w-28 pb-10" src="static/phrase3.png">
+                                    </div>
                                 </div>
                                 {% elif 6 < treeScore <= 8 %}
                                 <div>
-                                    4
+                                    <div class="flex items-center justify-center pt-40">
+                                        <img class="w-52" src="static/phrase4.png">
+                                    </div>
                                 </div>
                                 {% elif 8 < treeScore %}
                                 <div>
-                                    5
+                                    <div class="flex items-center justify-center pt-32">
+                                        <img class="w-60" src="static/phrase5.png">
+                                    </div>
                                 </div>
                                 {% endif %}
-                            </div>
                         </div>
                     </div>
-                    <div class="row-span-1">
-                        Reset
+                    <div class="flex row-span-1 justify-center items-center">
+                        {% if level == 5 %}
+                        <form method="POST">
+                            <button type="submit" name="next" value="clicked" class="bg-blue-500 hover:bg-blue-700 text-white font-bold px-10 py-4 rounded">
+                                Plant your next tree!
+                            </button>
+                        </form>
+                        {% else %}
+                        <button class="bg-gray-500 text-white font-bold px-10 py-4 rounded">
+                            Don't abandon your tree!
+                        </button>
+                        {% endif %}
                     </div>
                 </div>
             </div>
