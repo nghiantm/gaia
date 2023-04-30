@@ -9,14 +9,41 @@ const question = [
         ]
     },
     {
-        question: "What two main substances do trees absorb from the atmosphere?",
+        question: "<span style='color: rgb(235 235 237);'>What two main substances do trees absorb from the atmosphere?",
         answers: [
             { text: "trees absorb carbon dioxide and water", correct: true},
             { text: "trees only need sunlight", correct: false},
             { text: "trees absorb oxygen and water", correct: false},
             { text: "trees absorb nutrients and water from the soil", correct: false},
         ]
-    }
+    },
+    {
+        question: "<span style='color: rgb(235 235 237);'>What two main substances do trees absorb from the atmosphere?",
+        answers: [
+            { text: "trees absorb carbon dioxide and water", correct: true},
+            { text: "trees only need sunlight", correct: false},
+            { text: "trees absorb oxygen and water", correct: false},
+            { text: "trees absorb nutrients and water from the soil", correct: false},
+        ]
+    },
+    {
+        question: "<span style='color: rgb(235 235 237);'>What two main substances do trees absorb from the atmosphere?",
+        answers: [
+            { text: "trees absorb carbon dioxide and water", correct: true},
+            { text: "trees only need sunlight", correct: false},
+            { text: "trees absorb oxygen and water", correct: false},
+            { text: "trees absorb nutrients and water from the soil", correct: false},
+        ]
+    },
+    {
+        question: "<span style='color: rgb(235 235 237);'>What two main substances do trees absorb from the atmosphere?",
+        answers: [
+            { text: "trees absorb carbon dioxide and water", correct: true},
+            { text: "trees only need sunlight", correct: false},
+            { text: "trees absorb oxygen and water", correct: false},
+            { text: "trees absorb nutrients and water from the soil", correct: false},
+        ]
+    },
 ];
 
 const questionElement = document.getElementById("question");
@@ -80,7 +107,7 @@ function selectAnswer(e){
 
 function showScore(){
     resetState();
-    questionElement.innerHTML = `You scored ${score} out of ${question.length}!`;
+    questionElement.innerHTML = `<span style='color: rgb(235 235 237);'>You scored ${score} out of ${question.length}!`;
     nextButton.innerHTML = "Play Again";
     nextButton.style.display = "block";
 }
