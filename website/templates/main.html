@@ -21,6 +21,7 @@
 
 <body>
     <div class="grid grid-cols-3">
+            <!-- 1st -->
             <div class="grid grid-rows-6">
                 <div class="row-span-1 bg-blue-100">
                     <div class="grid grid-rows-2 h-full">
@@ -35,16 +36,28 @@
                 <div class="row-span-5">
                     <div class="grid grid-rows-2 h-full">
                         <div class="bg-blue-500">
-                            <div class="grid grid-rows-6 h-full">
+                            <div class="grid grid-rows-6 h-full border-2 border-black rounded-lg p-4">
                                 <div class="row-span-1 inline-flex justify-center items-center montserratFont text-2xl">
                                     Daily Challenges
                                 </div>
                                 <div class="row-span-5">
-                                    <ul>
+                                    <ul class="">
                                         {% for key, value in dailyDict.items() %}
-                                        <li>
-                                            {{key}}
-                                        </li>
+                                        <form method="POST">
+                                            {% if value == True %}
+                                                <li class="flex justify-start ml-10 line-through text-slate-600">
+                                                    <button type="submit" name="doneness" value="{{ key }}">
+                                                        {{key}}
+                                                    </button>
+                                                </li>
+                                            {% else %}
+                                                <li class="flex justify-start ml-10">
+                                                    <button type="submit" name="doneness" value="{{ key }}">
+                                                        {{key}}
+                                                    </button>
+                                                </li>
+                                            {% endif %}
+                                        </form>
                                         {% endfor %}
                                     </ul>
                                 </div>
@@ -56,19 +69,56 @@
                     </div>
                 </div>
             </div>
+            <!-- end -->
 
-
-        <div class="grid gird-rows-9 h-screen">
-            <div class="bg-red-100 row-span-1 flex justify-center items-center text-4xl">
-                Grow Your Tree
+        <!-- 2nd -->
+        <div class="grid grid-rows-6 h-screen">
+            <div class="row-span-1 bg-blue-100">
+                <div class="grid grid-rows-2 h-full">
+                    <div class="inline-flex justify-center items-center montserratFont text-4xl font-bold">
+                        Your Tree
+                    </div>
+                    <div class="inline-flex justify-center items-center montserratFont">
+                        Description
+                    </div>
+                </div>
             </div>
-            <div class="bg-blue-100 row-span-6">
-                2
+            <div class="row-span-5">
+                <div class="grid grid-rows-6 h-full">
+                    <div class="row-span-5">
+                        <div class="grid grid-rows-6 h-full border-2 border-black rounded-lg p-4">
+                            <div class="row-span-5 inline-flex justify-center items-center montserratFont text-2xl">
+                                {% if treeScore <= 2 %}
+                                <div>
+                                    1st
+                                </div>
+                                {% elif 2 < treeScore <= 4 %}
+                                <div>
+                                    2
+                                </div>
+                                {% elif 4 < treeScore <= 6 %}
+                                <div>
+                                    3
+                                </div>
+                                {% elif 6 < treeScore <= 8 %}
+                                <div>
+                                    4
+                                </div>
+                                {% elif 8 < treeScore %}
+                                <div>
+                                    5
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-span-1">
+                        Reset
+                    </div>
+                </div>
             </div>
-            <div class="bg-red-100 row-span-2">
-                3
-            </div>            
         </div>
+
         <div>
             3
         </div>
