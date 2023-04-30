@@ -40,7 +40,13 @@
                                     Daily Challenges
                                 </div>
                                 <div class="row-span-5">
-                                    2
+                                    <ul>
+                                        {% for key, value in dailyDict.items() %}
+                                        <li>
+                                            {{key}}
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
                                 </div>
                             </div>
                         </div>
