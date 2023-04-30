@@ -12,6 +12,7 @@ Our goal is to encourage users to take meaningful action towards protecting the 
 ## Installation
 For Windows OS:
     - install Python3
+
 install Flask: (run this in the terminal)
     - pip install flask
 
