@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Price Board</title>   
-    
+    <link rel="stylesheet" href="style.css">
     <style>
         .montserrat-font {
             font-family: 'Montserrat', sans-serif;
@@ -23,47 +23,58 @@
 </head>
 
 <body>
-    <div class="grid grid-rows-5 h-screen w-screen">
-        <!-- First row, name -->
-        <div class="grid grid-rows-3 text-center">
-            <div class="row-span-1">
-                <div class="flex justify-center items-end h-full text-4xl montserrat-font">
-                    Welcome To
+    <div 
+    class="w-full h-full bg-no-repeat bg-cover"
+    style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1772&q=80');">
+
+    
+        <div class="grid grid-rows-5 h-screen w-screen">
+            <!-- First row, name -->
+            <div class="grid grid-rows-3 text-center">
+                <div class="row-span-1">
+                    <div class="flex justify-center items-end h-full text-4xl montserrat-font">
+                        <p class="text-white">Meet</p>
+                    </div>
                 </div>
-            </div>
-            <div class="row-span-2">
-                <div class="flex justify-center items-center h-full text-9xl montserrat-font font-bold	">
-                    GAIA
-                </div>
-            </div>
-        </div>
-        <!-- First row end -->
-        <!-- Second row start -->
-        <div class="row-span-1">
-            <div>
-                1
-            </div>
-        </div>
-        <!-- Second row end -->
-        <!-- Thrid row start -->
-        <div class="row-span-1 bg-red-100">
-            <div class="grid grid-rows-3 h-full">
-                <div class="flex row-span-1 justify-center items-center montserrat-font text-xl">
-                    Bla Bla
-                </div>
-                <div class="row-span-1 flex justify-center">
-                    <div class="inline-flex justify-center items-center">
-                        <form method="POST">
-                            <button type ="submit" name="start" value="clicked" class="inline-flex justify-center bg-blue-500 hover:bg-blue-700 text-white font-bold px-10 py-4 rounded">
-                                Start Making Green Habit
-                            </button>
-                        </form>
+                <div class="row-span-2">
+                    <div class="flex justify-center items-center h-full text-9xl montserrat-font font-bold	">
+                        <p class="text-white">Gaia</p>
                     </div>
                 </div>
             </div>
-        </div>
-        <div>
-            4
+            <!-- First row end -->
+            <!-- Second row start -->
+            <div class="row-span-1">
+                <div class="p-10">
+                    <center><p class="text-white">Gaia, our stunning planet Earth, is a complex and ever-changing ecosystem that provides vital resources for all living beings. From the tiniest microorganisms to the largest mammals, all creatures rely on the essential elements such as air, water, food, and shelter that Gaia offers. It is our responsibility to safeguard and cherish this precious gift for future generations</p>
+
+                    </center>
+                </div>
+            </div>
+            <!-- Second row end -->
+            <!-- Thrid row start -->
+            <div class="row-span-1">
+                <div class="grid grid-rows-3 h-full">
+                    <div class="flex row-span-1 justify-center items-center montserrat-font text-xl">
+                        <center><p class="text-white">
+                            Gaia is currently facing a multitude of challenges due to climate change, including rising temperatures, sea level rise, extreme weather events, and loss of biodiversity. In response to this urgent need, we have created this website as a tool to empower individuals to take action and help Gaia restore her health.<br>How would you like to help Gaia?</p>
+
+                        </center>
+                    </div>
+                    <div class="row-span-1 flex justify-center">
+                        <div class="inline-flex justify-center items-center">
+                            <form method="POST">
+                                <button type ="submit" name="start" value="clicked" class="inline-flex justify-center bg-blue-500 hover:bg-blue-700 text-white font-bold px-10 py-4 rounded">
+                                    Reduce CO2
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                4
+            </div>
         </div>
     </div>
 
