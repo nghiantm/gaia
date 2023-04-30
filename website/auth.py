@@ -68,7 +68,7 @@ def main():
         
         if request.form.get('reset') == 'clicked':
             initDict()
-            counter = 1
+            counter = 0
             return redirect('#')
 
         if request.form.get('treevia') == 'clicked':
