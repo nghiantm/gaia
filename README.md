@@ -13,6 +13,7 @@ Our goal is to encourage users to take meaningful action towards protecting the 
 For Windows OS:
     - install Python3
 
+For Windows OS and Mac OS:
 install Flask: (run this in the terminal)
     - pip install flask
 
