@@ -10,7 +10,10 @@ In addition to the green tasks, we have also included a fun trivia game that pro
 Our goal is to encourage users to take meaningful action towards protecting the planet, and we hope that our website will inspire individuals to make a positive impact on the environment. Thank you for visiting our website and joining us in the fight against climate change!
 
 ## Installation
-It is not mandatory to download any prerequisites for running this website.
+install Flask: (run this in the terminal)
+    - pip install flask
+    - pip install flask-login
+    - pip install flask-sqlalchemy
 
 ## Usage
 The homepage features a button that redirects users to an external website, where they can undertake tasks to nurture a tree that aids in combating climate change. Additionally, located on the right-hand side of the webpage is a concise trivia game aimed at enhancing users' knowledge about climate change.
