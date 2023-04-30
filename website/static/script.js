@@ -1,6 +1,6 @@
 const question = [
     {
-        question: "Trees may help reduce the effects of global warming by which of these?",
+        question: "<span style='color: rgb(235 235 237);'>Trees may help reduce the effects of global warming by which of these?",
         answers: [
             { text: "reducing carbon dioxide concentrations in the atmosphere", correct: true},
             { text: "losing their leaves in winter", correct: false},
@@ -37,7 +37,7 @@ function showQuestion(){
     resetState();
     let currentQuestion = question[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
-    questionElement.innerHTML = questionNo + ". " + currentQuestion.
+    questionElement.innerHTML = currentQuestion.
     question;
 
 
