@@ -3,7 +3,11 @@
 ## Description
 Welcome to Viridis, created by a group of college freshmen with a shared vision of combating climate change and protecting our planet. Our mission is to encourage and motivate users to take action towards reducing their carbon footprint and help save the Earth.
 
+![Gaia Introduction](https://visridis.s3.amazonaws.com/gaia_intro.png)
+
 Our website provides a comprehensive list of "green" tasks that individuals can perform to help reduce CO2 emissions, thereby helping to slow down climate change. By completing a certain number of these tasks, users can earn points towards growing a tree that will contribute to fighting climate change. We believe that growing trees is one of the most effective ways to mitigate the effects of climate change, and every tree counts towards a healthier planet.
+
+![Gaia Introduction](https://visridis.s3.amazonaws.com/gaia_main.png)
 
 In addition to the green tasks, we have also included a fun trivia game that provides users with interesting facts about climate change. The game is designed to educate and inform users about the causes and effects of climate change, while also providing a fun and interactive experience.
 
